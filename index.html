@@ -3,186 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Pro - L'Expérience IPTV Ultime en France</title>
+    <title>Atlas Pro ONTV - Premium IPTV France</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #e67e22; /* Atlas Pro Orange */
-            --dark-bg: #0f172a;
-            --card-bg: #1e293b;
-            --text-white: #ffffff;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-white);
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                        url('https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80');
-            background-size: cover;
-            border-bottom: 3px solid var(--primary-color);
-        }
-
-        h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary-color); }
-        p.subtitle { font-size: 1.1rem; color: #cbd5e1; }
-
-        .pricing-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 40px 0;
-        }
-
-        .price-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: 0.3s;
-            border: 1px solid #334155;
-            position: relative;
-        }
-
-        .price-card:hover { transform: translateY(-5px); border-color: var(--primary-color); }
-        .price-card.featured { border: 2px solid var(--primary-color); }
-
-        .badge {
-            background: var(--primary-color);
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.75rem;
-        }
-
-        .price { font-size: 3rem; font-weight: bold; margin: 15px 0; color: #fff; }
-        .price span { font-size: 1.2rem; }
-
-        .features-list { list-style: none; padding: 0; margin: 25px 0; text-align: left; }
-        .features-list li { margin-bottom: 10px; display: flex; align-items: center; font-size: 0.9rem; }
-        .features-list li i { color: #10b981; margin-right: 8px; }
-
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            transition: 0.3s;
-        }
-        .btn-whatsapp:hover { background-color: #128c7e; }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #25d366;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-            z-index: 1000;
-            text-decoration: none;
-        }
-
-        footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #64748b; background: #020617; }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .price { font-size: 2.5rem; }
-        }
+        :root { --primary: #ff6b00; --dark-bg: #050505; --glass: rgba(255, 255, 255, 0.05); }
+        body { font-family: 'Poppins', sans-serif; background: var(--dark-bg); color: #fff; margin: 0; padding-bottom: 80px; }
+        header { height: 40vh; background: linear-gradient(rgba(0,0,0,0.5), #050505), url('https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=2070&auto=format&fit=crop'); background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 2px solid var(--primary); }
+        .test-banner { background: var(--primary); color: #000; text-align: center; padding: 15px; font-weight: 800; font-size: 1.1rem; sticky; top: 0; z-index: 100; }
+        .test-btn { background: #000; color: #fff; padding: 8px 20px; border-radius: 50px; text-decoration: none; margin-left: 10px; display: inline-block; font-size: 0.9rem; border: 1px solid #fff; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 30px 15px; max-width: 1100px; margin: 0 auto; }
+        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; text-align: center; transition: 0.3s; }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .price { font-size: 3rem; font-weight: 800; margin: 10px 0; color: #fff; }
+        .price span { font-size: 1.2rem; color: var(--primary); }
+        .features { list-style: none; padding: 0; text-align: left; margin: 20px 0; font-size: 0.9rem; }
+        .features li { margin: 8px 0; }
+        .features li i { color: var(--primary); margin-right: 8px; }
+        .buy-btn { background: var(--primary); color: #fff; text-decoration: none; padding: 12px; border-radius: 50px; font-weight: bold; display: block; text-align: center; }
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; color: #fff; text-decoration: none; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        footer { padding: 20px; text-align: center; font-size: 0.75rem; color: #666; border-top: 1px solid #1a1a1a; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1>ATLAS PRO ONTV</h1>
-            <p class="subtitle">Abonnement IPTV Premium en France. Qualité 4K & Stabilité Absolue.</p>
-        </div>
+        <h1 style="font-size: 2.5rem; color: var(--primary); margin: 0;">ATLAS PRO ONTV</h1>
+        <p style="margin: 5px 0;">Premium IPTV France - 4K / UHD</p>
     </header>
 
-    <div class="container">
-        <div class="pricing-container">
-            
-            <div class="price-card">
-                <h3>Pack Standard</h3>
-                <p>12 Mois - 1 Écran</p>
-                <div class="price">35<span>€</span></div>
-                <ul class="features-list">
-                    <li><i class="fas fa-check"></i> +20,000 Chaînes Monde</li>
-                    <li><i class="fas fa-check"></i> VOD Illimitée (Films & Séries)</li>
-                    <li><i class="fas fa-check"></i> Qualité 4K / UHD / HEVC</li>
-                    <li><i class="fas fa-check"></i> Compatible Smart TV & Box</li>
-                </ul>
-                <a href="https://wa.me/447988520630?text=Bonjour, je souhaite commander le pack Atlas Pro (1 écran) à 35€" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Commander
-                </a>
-            </div>
+    <div class="test-banner">
+        🎁 TEST 24H GRATUIT
+        <a href="https://wa.me/447988520630?text=Bonjour, je souhaite tester Atlas Pro gratuitement pendant 24h" class="test-btn">CLIQUEZ ICI</a>
+    </div>
 
-            <div class="price-card featured">
-                <div class="badge">OFFRE FAMILLE</div>
-                <h3>Pack Duo</h3>
-                <p>12 Mois - 2 Écrans</p>
-                <div class="price">60<span>€</span></div>
-                <ul class="features-list">
-                    <li><i class="fas fa-check"></i> 2 Écrans Simultanés</li>
-                    <li><i class="fas fa-check"></i> Tout le contenu Premium</li>
-                    <li><i class="fas fa-check"></i> Support VIP 7j/7</li>
-                    <li><i class="fas fa-check"></i> Sans engagement</li>
-                </ul>
-                <a href="https://wa.me/447988520630?text=Bonjour, je souhaite commander le pack Atlas Pro (2 écrans) à 60€" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Profiter de l'offre
-                </a>
-            </div>
+    <div class="grid">
+        <div class="card" style="border: 2px solid var(--primary);">
+            <div style="background: var(--primary); color:#000; font-size: 0.7rem; padding: 2px; border-radius: 5px; width: 80px; margin: 0 auto 10px;">PROMO</div>
+            <h3>PACK 12 MOIS</h3>
+            <div class="price">35<span>€</span></div>
+            <ul class="features">
+                <li><i class="fas fa-check"></i> +21,000 Chaînes Monde</li>
+                <li><i class="fas fa-check"></i> VOD (Films & Séries) 4K</li>
+                <li><i class="fas fa-check"></i> Pas de coupures</li>
+            </ul>
+            <a href="https://wa.me/447988520630?text=Je veux commander le pack 12 mois à 35€" class="buy-btn">COMMANDER</a>
+        </div>
 
-            <div class="price-card">
-                <h3>Pack Premium</h3>
-                <p>12 Mois - 3 Écrans</p>
-                <div class="price">80<span>€</span></div>
-                <ul class="features-list">
-                    <li><i class="fas fa-check"></i> 3 Écrans Simultanés</li>
-                    <li><i class="fas fa-check"></i> Idéal pour toute la maison</li>
-                    <li><i class="fas fa-check"></i> Installation Rapide</li>
-                    <li><i class="fas fa-check"></i> Serveurs Ultra-Stables</li>
-                </ul>
-                <a href="https://wa.me/447988520630?text=Bonjour, je souhaite commander le pack Atlas Pro (3 écrans) à 80€" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Commander
-                </a>
-            </div>
-
+        <div class="card">
+            <h3>PACK DUO (2 Écrans)</h3>
+            <div class="price">60<span>€</span></div>
+            <ul class="features">
+                <li><i class="fas fa-check"></i> 12 Mois - 2 Appareils</li>
+                <li><i class="fas fa-check"></i> Idéal pour la Famille</li>
+                <li><i class="fas fa-check"></i> Support VIP 24/7</li>
+            </ul>
+            <a href="https://wa.me/447988520630?text=Je veux commander le pack Duo à 60€" class="buy-btn">COMMANDER</a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Atlas Pro France. Paiement sécurisé. Activation en 15 minutes.</p>
-        <p>Satisfait ou remboursé sous 48 heures.</p>
+        <p>&copy; 2026 Atlas Pro France. Paiement sécurisé par PayPal & Carte.</p>
     </footer>
 
-    <a href="https://wa.me/447988520630?text=Bonjour, j'ai une question sur l'abonnement Atlas Pro" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp" style="color: white;"></i>
+    <a href="https://wa.me/447988520630" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
 </body>
