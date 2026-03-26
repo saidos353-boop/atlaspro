@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Pro - L'Expérience IPTV Ultime en France</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e67e22; /* Atlas Pro Orange */
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80');
+            background-size: cover;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary-color); }
+        p.subtitle { font-size: 1.1rem; color: #cbd5e1; }
+
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 40px 0;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #334155;
+            position: relative;
+        }
+
+        .price-card:hover { transform: translateY(-5px); border-color: var(--primary-color); }
+        .price-card.featured { border: 2px solid var(--primary-color); }
+
+        .badge {
+            background: var(--primary-color);
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.75rem;
+        }
+
+        .price { font-size: 3rem; font-weight: bold; margin: 15px 0; color: #fff; }
+        .price span { font-size: 1.2rem; }
+
+        .features-list { list-style: none; padding: 0; margin: 25px 0; text-align: left; }
+        .features-list li { margin-bottom: 10px; display: flex; align-items: center; font-size: 0.9rem; }
+        .features-list li i { color: #10b981; margin-right: 8px; }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            transition: 0.3s;
+        }
+        .btn-whatsapp:hover { background-color: #128c7e; }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25d366;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #64748b; background: #020617; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .price { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>ATLAS PRO ONTV</h1>
+            <p class="subtitle">Abonnement IPTV Premium en France. Qualité 4K & Stabilité Absolue.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="pricing-container">
+            
+            <div class="price-card">
+                <h3>Pack Standard</h3>
+                <p>12 Mois - 1 Écran</p>
+                <div class="price">35<span>€</span></div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> +20,000 Chaînes Monde</li>
+                    <li><i class="fas fa-check"></i> VOD Illimitée (Films & Séries)</li>
+                    <li><i class="fas fa-check"></i> Qualité 4K / UHD / HEVC</li>
+                    <li><i class="fas fa-check"></i> Compatible Smart TV & Box</li>
+                </ul>
+                <a href="https://wa.me/447988520630?text=Bonjour, je souhaite commander le pack Atlas Pro (1 écran) à 35€" class="btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+
+            <div class="price-card featured">
+                <div class="badge">OFFRE FAMILLE</div>
+                <h3>Pack Duo</h3>
+                <p>12 Mois - 2 Écrans</p>
+                <div class="price">60<span>€</span></div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> 2 Écrans Simultanés</li>
+                    <li><i class="fas fa-check"></i> Tout le contenu Premium</li>
+                    <li><i class="fas fa-check"></i> Support VIP 7j/7</li>
+                    <li><i class="fas fa-check"></i> Sans engagement</li>
+                </ul>
+                <a href="https://wa.me/447988520630?text=Bonjour, je souhaite commander le pack Atlas Pro (2 écrans) à 60€" class="btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Profiter de l'offre
+                </a>
+            </div>
+
+            <div class="price-card">
+                <h3>Pack Premium</h3>
+                <p>12 Mois - 3 Écrans</p>
+                <div class="price">80<span>€</span></div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> 3 Écrans Simultanés</li>
+                    <li><i class="fas fa-check"></i> Idéal pour toute la maison</li>
+                    <li><i class="fas fa-check"></i> Installation Rapide</li>
+                    <li><i class="fas fa-check"></i> Serveurs Ultra-Stables</li>
+                </ul>
+                <a href="https://wa.me/447988520630?text=Bonjour, je souhaite commander le pack Atlas Pro (3 écrans) à 80€" class="btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Atlas Pro France. Paiement sécurisé. Activation en 15 minutes.</p>
+        <p>Satisfait ou remboursé sous 48 heures.</p>
+    </footer>
+
+    <a href="https://wa.me/447988520630?text=Bonjour, j'ai une question sur l'abonnement Atlas Pro" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp" style="color: white;"></i>
+    </a>
+
+</body>
+</html>
