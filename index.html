@@ -3,69 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Pro ONTV - Premium IPTV France</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Atlas Pro ONTV - Meilleur Abonnement IPTV en France</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #ff6b00; --dark-bg: #050505; --glass: rgba(255, 255, 255, 0.05); }
-        body { font-family: 'Poppins', sans-serif; background: var(--dark-bg); color: #fff; margin: 0; padding-bottom: 80px; }
-        header { height: 40vh; background: linear-gradient(rgba(0,0,0,0.5), #050505), url('https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=2070&auto=format&fit=crop'); background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 2px solid var(--primary); }
-        .test-banner { background: var(--primary); color: #000; text-align: center; padding: 15px; font-weight: 800; font-size: 1.1rem; sticky; top: 0; z-index: 100; }
-        .test-btn { background: #000; color: #fff; padding: 8px 20px; border-radius: 50px; text-decoration: none; margin-left: 10px; display: inline-block; font-size: 0.9rem; border: 1px solid #fff; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 30px 15px; max-width: 1100px; margin: 0 auto; }
-        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; text-align: center; transition: 0.3s; }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .price { font-size: 3rem; font-weight: 800; margin: 10px 0; color: #fff; }
-        .price span { font-size: 1.2rem; color: var(--primary); }
-        .features { list-style: none; padding: 0; text-align: left; margin: 20px 0; font-size: 0.9rem; }
-        .features li { margin: 8px 0; }
-        .features li i { color: var(--primary); margin-right: 8px; }
-        .buy-btn { background: var(--primary); color: #fff; text-decoration: none; padding: 12px; border-radius: 50px; font-weight: bold; display: block; text-align: center; }
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; color: #fff; text-decoration: none; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        footer { padding: 20px; text-align: center; font-size: 0.75rem; color: #666; border-top: 1px solid #1a1a1a; }
+        /* Base Styles - Inspired by your shared image */
+        :root {
+            --bg-color: #0c0c0c; /* Very dark background */
+            --card-bg: #161616; /* Slightly lighter dark for cards */
+            --text-color: #ffffff;
+            --primary-accent: #00d2ff; /* The bright blue from your image */
+            --secondary-accent: #3a86ff; /* A slightly darker blue for hover */
+            --font-main: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header / Navigation (Top Bar) --- */
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-image {
+            height: 40px; /* Adjust based on your logo */
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .logo-text span {
+            color: var(--primary-accent);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 0.9rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--primary-accent);
+        }
+
+        /* --- Hero Section (Main Banner) --- */
+        .hero {
+            height: 80vh; /* Adjust height */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), 
+                        url('https://via.placeholder.com/1920x1080/111/222?text=TV+Wallpaper') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 80px; /* space for fixed header */
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-accent);
+            color: #000;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-accent);
+            color: #fff;
+        }
+
+        /* --- INFO BOXES (The Central Part You Requested) --- */
+        .info-boxes {
+            padding: 60px 0;
+            background-color: var(--bg-color);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #222;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-accent);
+        }
+
+        .info-icon {
+            font-size: 3rem;
+            color: var(--primary-accent);
+            margin-bottom: 20px;
+        }
+
+        .info-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .info-card p {
+            font-size: 0.95rem;
+            color: #ccc;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+
+        .btn-info {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid var(--primary-accent);
+            color: var(--primary-accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 5px;
+            font-size: 0.85rem;
+        }
+
+        .btn-info:hover {
+            background-color: var(--primary-accent);
+            color: #000;
+        }
+
+        /* --- Tarifs Section (Brief Example) --- */
+        .tarifs {
+            padding: 60px 0;
+            background-color: var(--card-bg);
+            text-align: center;
+        }
+
+        .tarifs h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        /* Simple Placeholder for Price Cards */
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .price-card {
+            background: #000;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #000;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #222;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* --- WhatsApp Floating Button --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+        }
+
+        /* --- Responsive Styles --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            nav ul { display: none; } /* Basic mobile hide */
+            .info-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 style="font-size: 2.5rem; color: var(--primary); margin: 0;">ATLAS PRO ONTV</h1>
-        <p style="margin: 5px 0;">Premium IPTV France - 4K / UHD</p>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Atlas Pro ONTV Logo" class="logo-image">
+                <div class="logo-text">ATLAS PRO <span>ONTV</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#tarifs">Tarifs</a></li>
+                    <li><a href="#tutoriels">Tutoriels</a></li>
+                    <li><a href="mailto:contact@atlaspro-france.cc">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="test-banner">
-        🎁 TEST 24H GRATUIT
-        <a href="https://wa.me/447988520630?text=Bonjour, je souhaite tester Atlas Pro gratuitement pendant 24h" class="test-btn">CLIQUEZ ICI</a>
-    </div>
-
-    <div class="grid">
-        <div class="card" style="border: 2px solid var(--primary);">
-            <div style="background: var(--primary); color:#000; font-size: 0.7rem; padding: 2px; border-radius: 5px; width: 80px; margin: 0 auto 10px;">PROMO</div>
-            <h3>PACK 12 MOIS</h3>
-            <div class="price">35<span>€</span></div>
-            <ul class="features">
-                <li><i class="fas fa-check"></i> +21,000 Chaînes Monde</li>
-                <li><i class="fas fa-check"></i> VOD (Films & Séries) 4K</li>
-                <li><i class="fas fa-check"></i> Pas de coupures</li>
-            </ul>
-            <a href="https://wa.me/447988520630?text=Je veux commander le pack 12 mois à 35€" class="buy-btn">COMMANDER</a>
+    <section id="accueil" class="hero">
+        <div class="container hero-content">
+            <h1>Atlas Pro ONTV <br> Meilleur Abonnement IPTV en France</h1>
+            <p>Bienvenue sur l’unique site officiel d’abonnement Atlas Pro ONTV. Sans revendeurs ni complications : fiabilité totale, assistance 24/24 et 7/7.</p>
+            <a href="#tarifs" class="btn-primary">Découvrir nos offres</a>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>PACK DUO (2 Écrans)</h3>
-            <div class="price">60<span>€</span></div>
-            <ul class="features">
-                <li><i class="fas fa-check"></i> 12 Mois - 2 Appareils</li>
-                <li><i class="fas fa-check"></i> Idéal pour la Famille</li>
-                <li><i class="fas fa-check"></i> Support VIP 24/7</li>
-            </ul>
-            <a href="https://wa.me/447988520630?text=Je veux commander le pack Duo à 60€" class="buy-btn">COMMANDER</a>
+    <section class="info-boxes">
+        <div class="container">
+            <div class="info-grid">
+                
+                <div class="info-card">
+                    <i class="fas fa-tv info-icon"></i>
+                    <h3>Chaînes Mondiales</h3>
+                    <p>Profitez de plus de 22 000 chaînes mondiales en 4K, Full HD et HD.</p>
+                    <a href="#tarifs" class="btn-info">En savoir plus</a>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-film info-icon"></i>
+                    <h3>VOD Films et Séries</h3>
+                    <p>Accédez à une bibliothèque de plus de 90 000 VOD, films et séries.</p>
+                    <a href="#tarifs" class="btn-info">En savoir plus</a>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-bolt info-icon"></i>
+                    <h3>Activation Instantanée</h3>
+                    <p>Activation de votre abonnement en moins de 10 minutes après confirmation.</p>
+                    <a href="#tarifs" class="btn-info">En savoir plus</a>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-headset info-icon"></i>
+                    <h3>Assistance Client 24h/7j</h3>
+                    <p>Notre équipe support est disponible 24/7 pour répondre à vos questions.</p>
+                    <a href="#tarifs" class="btn-info">En savoir plus</a>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="tarifs" class="tarifs">
+        <div class="container">
+            <h2>Nos Tarifs</h2>
+            <div class="price-grid">
+                <div class="price-card">Abonnement 12 Mois - Pour 1 écran - 34,99€ (Exemple)</div>
+                <div class="price-card">Abonnement 12 Mois - Pour 2 écrans - 59,99€ (Exemple)</div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Atlas Pro France. Paiement sécurisé par PayPal & Carte.</p>
+        <div class="container">
+            <p>&copy; 2023 Atlas Pro ONTV France. Tous droits réservés.</p>
+            <p>Contact: <a href="mailto:contact@atlaspro-france.cc">contact@atlaspro-france.cc</a></p>
+        </div>
     </footer>
 
-    <a href="https://wa.me/447988520630" class="wa-float" target="_blank">
+    <a href="https://wa.me/1234567890?text=Bonjour%20Atlas%20Pro%20France,%20je%20souhaite%20tester%20votre%20service." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
