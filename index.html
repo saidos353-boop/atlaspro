@@ -11,8 +11,9 @@
             --bg-color: #0c0c0c;
             --card-bg: #000000;
             --text-color: #ffffff;
-            --primary-accent: #ccff00; 
-            --blue-accent: #00d2ff;
+            --primary-accent: #ccff00; /* Neon green for main CTA */
+            /* --- التعديل هنا ليكون اللون مفتوحاً وزاهياً --- */
+            --blue-accent: #00e5ff; /* Bright, open cyan-blue inspired by logo */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,6 +27,7 @@
         .hero { 
             padding: 120px 0 80px; 
             text-align: center; 
+            /* خلفية جدار الشاشات الخاصة بك */
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('69689912-une-grand-mur-de-television-ecrans-gratuit-photo.jpeg'); 
             background-size: cover; 
             background-position: center;
@@ -35,6 +37,7 @@
         .hero h1 { font-size: 2.8rem; margin-bottom: 20px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); font-weight: 700; }
         .hero p { max-width: 800px; margin: 0 auto 30px; font-weight: 300; font-size: 1.1rem; opacity: 0.9; }
 
+        /* تصفيف زر التجربة المجانية */
         .btn-trial { 
             display: inline-block; 
             background-color: var(--primary-accent); 
@@ -52,6 +55,8 @@
         .btn-trial:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(204, 255, 0, 0.5); }
 
         .info-section { padding: 40px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        
+        /* تصفيف مربعات المعلومات - تم تحديث الحدود لتتناسب مع اللون المفتوح الجديد */
         .info-box { background: #1a1a1a; padding: 30px 20px; border-radius: 10px; text-align: center; border-bottom: 3px solid var(--blue-accent); }
         .info-box i { font-size: 2.5rem; color: var(--blue-accent); margin-bottom: 15px; }
         .info-box h4 { margin-bottom: 10px; font-size: 1.1rem; color: var(--blue-accent); }
@@ -68,15 +73,6 @@
         .price-features { list-style: none; margin-bottom: 30px; text-align: center; }
         .price-features li { padding: 10px 0; border-bottom: 1px solid #222; font-size: 0.9rem; font-weight: 300; }
         .btn-order { display: block; background-color: var(--primary-accent); color: #000; padding: 12px; border-radius: 3px; font-weight: 700; text-transform: uppercase; text-decoration: none; }
-
-        /* --- قسم الأسئلة الشائعة الجديد (مستقل) --- */
-        .faq-section { padding: 80px 0; background-color: #080808; }
-        .faq-title { text-align: center; margin-bottom: 50px; font-size: 2.2rem; color: var(--text-color); font-weight: 700; }
-        .faq-grid { max-width: 900px; margin: 0 auto; }
-        .faq-item { background: #111; margin-bottom: 20px; padding: 25px; border-radius: 8px; border-left: 4px solid var(--primary-accent); }
-        .faq-item h4 { color: var(--blue-accent); margin-bottom: 12px; font-size: 1.1rem; }
-        .faq-item p { color: #ccc; font-size: 0.95rem; font-weight: 300; }
-        /* ----------------------------------------- */
 
         footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #666; border-top: 1px solid #222; }
         .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
@@ -163,30 +159,6 @@
                         <li>Support 24h/24 - 7j/7</li>
                     </ul>
                     <a href="https://wa.me/447988520630?text=Bonjour, je souhaite commander le Pack 3" class="btn-order">COMMANDER</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="faq-title">Questions Fréquentes (FAQ)</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>Comment activer mon abonnement ?</h4>
-                    <p>L'activation est très simple. Une fois votre commande passée, nous vous envoyons vos identifiants via WhatsApp ou Email. Il vous suffit de les entrer dans l'application de votre choix.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Sur quels appareils puis-je regarder ?</h4>
-                    <p>Notre service est compatible avec tous les appareils : Smart TV (Samsung, LG, Sony, etc.), Android Box, Smartphone (iOS & Android), Apple TV, PC et MAG.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Est-ce que je peux tester le service ?</h4>
-                    <p>Oui, absolument. Nous proposons un essai gratuit de 24 heures pour vous permettre de tester la qualité de nos serveurs et la fluidité des chaînes avant de vous engager.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Quelle connexion internet est nécessaire ?</h4>
-                    <p>Pour une expérience optimale sans coupure en Full HD ou 4K, nous recommandons une connexion internet stable d'au moins 12 Mbps.</p>
                 </div>
             </div>
         </div>
