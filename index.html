@@ -6,7 +6,6 @@
     
     <title>Atlas Pro ONTV | Meilleur Abonnement IPTV France & Europe 2026</title>
     <meta name="description" content="Profitez du meilleur abonnement Atlas Pro ONTV en France. Plus de 22 000 chaînes 4K et 90 000 VOD. Essai gratuit 24h, activation rapide et support 24/7.">
-    <meta name="keywords" content="Atlas Pro ONTV, abonnement IPTV France, IPTV 4K, Atlas Pro officiel, IPTV Belgique, IPTV Suisse, VOD Netflix Disney">
     
     <link rel="icon" type="image/jpeg" href="images (11).jpeg">
     
@@ -30,25 +29,10 @@
         .header-container { display: flex; justify-content: space-between; align-items: center; }
         .logo img { height: 55px; width: auto; display: block; object-fit: contain; }
 
-        /* تنسيق شريط الثقة الجديد */
-        .trust-bar {
-            background: #151515;
-            padding: 10px 0;
-            border-bottom: 1px solid #222;
-            font-size: 0.8rem;
-        }
-        .trust-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #aaa;
-        }
+        /* شريط الثقة */
+        .trust-bar { background: #151515; padding: 10px 0; border-bottom: 1px solid #222; font-size: 0.8rem; }
+        .trust-container { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; }
+        .trust-item { display: flex; align-items: center; gap: 8px; color: #aaa; }
         .trust-item i { color: var(--primary-accent); font-size: 0.9rem; }
 
         .hero { 
@@ -71,47 +55,34 @@
         }
         .btn-trial:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(204, 255, 0, 0.5); }
 
-        .info-section { padding: 40px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        .info-box { 
-            background: var(--light-purple-bg); 
-            padding: 30px 20px; 
-            border-radius: 10px; 
-            text-align: center; 
-            border: 1px solid rgba(155, 89, 182, 0.3);
-            border-bottom: 3px solid var(--blue-accent); 
+        /* قسم الأجهزة المدعومة */
+        .devices-section { padding: 60px 0; text-align: center; background: #080808; border-bottom: 1px solid #111; }
+        .devices-section h2 { margin-bottom: 40px; font-size: 2rem; color: #fff; }
+        .devices-img-container { margin-bottom: 30px; }
+        .devices-img { max-width: 80%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        
+        .device-list { 
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; 
+            max-width: 1000px; margin: 0 auto;
         }
-        .info-box i { font-size: 2.5rem; color: var(--blue-accent); margin-bottom: 15px; }
-        .info-box h4 { margin-bottom: 10px; font-size: 1.1rem; color: var(--blue-accent); }
-        .info-box p { font-size: 0.85rem; color: #eee; }
+        .device-tag { 
+            background: rgba(0, 229, 255, 0.1); color: var(--blue-accent);
+            padding: 10px 20px; border-radius: 50px; font-size: 0.9rem;
+            border: 1px solid rgba(0, 229, 255, 0.3); font-weight: 500;
+        }
 
-        /* مكان مخصص لقسم الأجهزة المدعومة مستقبلاً */
-        .devices-section { padding: 40px 0; text-align: center; background: #080808; }
-        .devices-section h3 { margin-bottom: 20px; font-size: 1.2rem; color: #888; text-transform: uppercase; }
-        .devices-img { max-width: 100%; height: auto; opacity: 0.8; }
-
-        .pricing { padding: 60px 0; }
+        .pricing { padding: 80px 0; }
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .price-card { background-color: var(--card-bg); border: 2px solid #333; border-radius: 5px; padding: 40px 20px; text-align: center; position: relative; transition: 0.3s; }
-        .price-card:hover, .price-card.featured { border-color: var(--primary-accent); transform: translateY(-5px); }
-        .price-card .badge { position: absolute; top: 15px; right: -30px; background-color: var(--primary-accent); color: #000; padding: 5px 40px; transform: rotate(45deg); font-size: 0.7rem; font-weight: 700; }
-        .price-card h3 { font-size: 1.2rem; margin-bottom: 10px; text-transform: uppercase; }
-        .price-card .price { font-size: 3rem; font-weight: 700; color: var(--primary-accent); margin-bottom: 5px; }
-        .price-card .duration { font-size: 0.9rem; margin-bottom: 25px; display: block; opacity: 0.8; }
-        .price-features { list-style: none; margin-bottom: 30px; }
-        .price-features li { padding: 10px 0; border-bottom: 1px solid #222; font-size: 0.9rem; }
-        .btn-order { display: block; background-color: var(--primary-accent); color: #000; padding: 12px; border-radius: 3px; font-weight: 700; text-transform: uppercase; text-decoration: none; }
-
-        .faq-section { padding: 80px 0; background-color: #080808; }
-        .faq-title { text-align: center; margin-bottom: 50px; font-size: 2.2rem; font-weight: 700; }
-        .faq-grid { max-width: 900px; margin: 0 auto; }
-        .faq-item { background: #111; margin-bottom: 20px; padding: 25px; border-radius: 8px; border-left: 4px solid var(--primary-accent); }
-        .faq-item h4 { color: var(--blue-accent); margin-bottom: 12px; }
-        .faq-item p { color: #ccc; font-size: 0.95rem; }
+        .price-card:hover { border-color: var(--primary-accent); transform: translateY(-5px); }
+        .price-card h3 { font-size: 1.2rem; margin-bottom: 15px; }
+        .price-card .price { font-size: 3rem; font-weight: 700; color: var(--primary-accent); }
+        .btn-order { display: block; background-color: var(--primary-accent); color: #000; padding: 12px; border-radius: 3px; font-weight: 700; text-decoration: none; margin-top: 20px; text-transform: uppercase; }
 
         footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #666; border-top: 1px solid #222; }
         .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; }
 
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .pricing-grid { grid-template-columns: 1fr; } .logo img { height: 40px; } .trust-container { justify-content: center; } }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .devices-img { max-width: 95%; } }
     </style>
 </head>
 <body>
@@ -119,11 +90,8 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="cropped-ontv4-e1764437385746.png" alt="Atlas Pro ONTV Logo Officiel">
+                <img src="cropped-ontv4-e1764437385746.png" alt="Atlas Pro ONTV Logo">
             </div>
-            <nav style="font-size: 0.8rem; display: flex; gap: 15px; font-weight: 600;">
-                <span>ATLAS PRO</span><span>TUTORIEL</span><span>À PROPOS</span>
-            </nav>
         </div>
     </header>
 
@@ -139,80 +107,47 @@
     <section class="hero">
         <div class="container">
             <h1>Atlas Pro ONTV : Meilleur Abonnement IPTV en France</h1>
-            <p>Bienvenue sur l'unique site officiel d'abonnement Atlas Pro ONTV. Profitez de la meilleure stabilité IPTV avec plus de 22 000 chaînes et 90 000 VOD en 4K.</p>
-            <a href="https://wa.me/447988520630?text=Bonjour, je souhaite un essai 24 gratuit" class="btn-trial">Essai 24H Gratuit</a>
+            <p>Profitez de plus de 22 000 chaînes et 90 000 VOD en 4K avec une stabilité inégalée.</p>
+            <a href="https://wa.me/447988520630?text=je%20cherche%20un%20abonnement%20iptv%20atlaspro" class="btn-trial">Essai 24H Gratuit</a>
         </div>
-    </section>
-
-    <section class="container info-section">
-        <div class="info-box"><i class="fas fa-globe"></i><h4>Chaînes Mondiales</h4><p>Accédez à plus de 22 000 chaînes mondiales en qualité 4K/Full HD.</p></div>
-        <div class="info-box"><i class="fas fa-film"></i><h4>VOD Films & Séries</h4><p>Catalogue riche de 90 000 films et séries mis à jour quotidiennement.</p></div>
-        <div class="info-box"><i class="fas fa-bolt"></i><h4>Activation Rapide</h4><p>Activation instantanée de votre compte Atlas Pro en moins de 10 minutes.</p></div>
-        <div class="info-box"><i class="fab fa-whatsapp"></i><h4>Support WhatsApp</h4><p>Notre équipe technique est disponible 24h/7j pour vous assister.</p></div>
     </section>
 
     <section class="devices-section">
         <div class="container">
-            <h3>Appareils Compatibles</h3>
-            <div id="devices-placeholder">
-                <p style="color: #555;">(En attente de l'image des appareils...)</p>
-                </div>
-        </div>
-    </section>
-
-    <section class="pricing">
-        <div class="container">
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <div class="badge">PROMO</div>
-                    <h3>12 Mois - 1 Écran</h3><div class="price">34,99€</div>
-                    <span class="duration">ABONNEMENT ATLAS PRO ONTV</span>
-                    <ul class="price-features"><li>Toutes les Chaînes HD/4K</li><li>VOD Illimitée</li><li>Technologie Anti-Freeze</li><li>Compatible tous appareils</li><li>Support VIP 24h/24</li></ul>
-                    <a href="https://wa.me/447988520630?text=Bonjour, Pack 1" class="btn-order">COMMANDER MAINTENANT</a>
-                </div>
-                <div class="price-card featured">
-                    <div class="badge">POPULAIRE</div>
-                    <h3>12 Mois - 2 Écrans</h3><div class="price">59,99€</div>
-                    <span class="duration">PACK FAMILLE ATLAS PRO</span>
-                    <ul class="price-features"><li>2 Connexions simultanées</li><li>Qualité Ultra HD 4K</li><li>Anti-Freeze</li><li>Support Prioritaire</li><li>Installation Guidée</li></ul>
-                    <a href="https://wa.me/447988520630?text=Bonjour, Pack 2" class="btn-order">COMMANDER MAINTENANT</a>
-                </div>
-                <div class="price-card">
-                    <div class="badge">OFFRE</div>
-                    <h3>12 Mois - 3 Écrans</h3><div class="price">79,99€</div>
-                    <span class="duration">PACK MULTI-ÉCRANS</span>
-                    <ul class="price-features"><li>3 Connexions simultanées</li><li>Idéal pour amis/famille</li><li>Toutes options incluses</li><li>Activation Prioritaire</li><li>Assistance Technique 24/7</li></ul>
-                    <a href="https://wa.me/447988520630?text=Bonjour, Pack 3" class="btn-order">COMMANDER MAINTENANT</a>
-                </div>
+            <h2>Appareils Compatibles</h2>
+            <div class="devices-img-container">
+                <img src="InShot_20260410_184153994.jpg" alt="Appareils compatibles LuxeStream" class="devices-img">
+            </div>
+            <div class="device-list">
+                <span class="device-tag"><i class="fas fa-tv"></i> Smart TV</span>
+                <span class="device-tag"><i class="fas fa-mobile-alt"></i> Smartphone</span>
+                <span class="device-tag"><i class="fas fa-tablet-alt"></i> Tablette</span>
+                <span class="device-tag"><i class="fas fa-laptop"></i> Ordinateur (PC/Mac)</span>
+                <span class="device-tag"><i class="fas fa-box"></i> Toutes les Box (Android, MAG, Apple TV)</span>
             </div>
         </div>
     </section>
 
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="faq-title">FAQ - Abonnement IPTV Atlas Pro</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>Comment activer mon code Atlas Pro ?</h4>
-                    <p>L'activation se fait dès réception de votre paiement. Nous vous envoyons le code et le guide d'installation via WhatsApp.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Quels sont les supports compatibles ?</h4>
-                    <p>Notre service Atlas Pro ONTV fonctionne sur Smart TV, Android Box, Firestick, PC et Smartphones.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Puis-je tester avant d'acheter ?</h4>
-                    <p>Absolument ! Nous proposons un essai gratuit de 24h pour tester la qualité et la stabilité de nos serveurs.</p>
-                </div>
+    <section class="pricing container">
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>12 Mois - 1 Écran</h3>
+                <div class="price">34,99€</div>
+                <a href="https://wa.me/447988520630?text=je%20cherche%20un%20abonnement%20iptv%20atlaspro" class="btn-order">COMMANDER MAINTENANT</a>
+            </div>
+            <div class="price-card" style="border-color: var(--primary-accent);">
+                <h3>12 Mois - 2 Écrans</h3>
+                <div class="price">59,99€</div>
+                <a href="https://wa.me/447988520630?text=je%20cherche%20un%20abonnement%20iptv%20atlaspro" class="btn-order">COMMANDER MAINTENANT</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Atlas Pro ONTV France - Site Officiel. Qualité Premium garantie.</p>
+        <p>&copy; 2026 LuxeStream - Atlas Pro ONTV Officiel.</p>
     </footer>
 
-    <a href="https://wa.me/447988520630" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/447988520630?text=je%20cherche%20un%20abonnement%20iptv%20atlaspro" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
