@@ -60,21 +60,6 @@
         .info-box i { font-size: 2.5rem; color: var(--blue-accent); margin-bottom: 15px; }
         .info-box h4 { color: var(--blue-accent); margin-bottom: 10px; }
 
-        /* --- قسم الأجهزة الجديد (صورة يمين، نص يسار) --- */
-        .devices-new-section { padding: 60px 0; background-color: #080808; border-bottom: 1px solid #111; }
-        .devices-new-container { display: flex; align-items: center; gap: 40px; justify-content: center; flex-wrap: wrap-reverse; }
-        
-        .devices-new-text { flex: 1; max-width: 500px; text-align: left; }
-        .devices-new-text h2 { font-size: 2rem; color: #fff; margin-bottom: 25px; font-weight: 600; text-transform: uppercase; }
-        
-        .device-new-item { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; padding: 10px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid transparent; }
-        .device-new-item:hover { border-color: rgba(0, 229, 255, 0.2); background: rgba(0, 229, 255, 0.05); }
-        .device-new-item i { font-size: 1.5rem; color: var(--blue-accent); width: 30px; text-align: center; }
-        .device-new-item span { color: #ccc; font-size: 0.95rem; font-weight: 500; }
-
-        .devices-new-img-wrapper { flex: 1; max-width: 400px; text-align: right; }
-        .devices-new-img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.6); opacity: 0.9; }
-
         .pricing { padding: 60px 0; }
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .price-card { background-color: var(--card-bg); border: 2px solid #333; border-radius: 5px; padding: 40px 20px; text-align: center; transition: 0.3s; }
@@ -86,12 +71,6 @@
         footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #666; border-top: 1px solid #222; }
         .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; }
 
-        @media (max-width: 900px) { 
-            .devices-new-container { flex-direction: column-reverse; text-align: center; }
-            .devices-new-text { text-align: center; max-width: 100%; }
-            .devices-new-img-wrapper { max-width: 80%; text-align: center; margin-bottom: 30px; }
-            .device-new-item { justify-content: center; }
-        }
         @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .logo img { height: 40px; } }
     </style>
 </head>
@@ -126,26 +105,6 @@
         <div class="info-box"><i class="fas fa-globe"></i><h4>Chaînes Mondiales</h4><p>Accédez à plus de 22 000 chaînes mondiales en 4K.</p></div>
         <div class="info-box"><i class="fas fa-bolt"></i><h4>Activation Rapide</h4><p>Activation en moins de 10 minutes après paiement.</p></div>
         <div class="info-box"><i class="fab fa-whatsapp"></i><h4>Support VIP</h4><p>Assistance technique disponible 24h/7j.</p></div>
-    </section>
-
-    <section class="devices-new-section">
-        <div class="container devices-new-container">
-            
-            <div class="devices-new-text">
-                <h2>Appareils Compatibles</h2>
-                <div class="device-new-item"><i class="fas fa-tv"></i><span>Smart TV (Samsung, LG, Sony)</span></div>
-                <div class="device-new-item"><i class="fas fa-box"></i><span>Android Box & Apple TV</span></div>
-                <div class="device-new-item"><i class="fas fa-mobile-alt"></i><span>Smartphone (Android & iPhone)</span></div>
-                <div class="device-new-item"><i class="fas fa-tablet-alt"></i><span>Tablette</span></div>
-                <div class="device-new-item"><i class="fas fa-laptop"></i><span>Ordinateur (PC/Mac)</span></div>
-                <div class="device-new-item"><i class="fas fa-fire"></i><span>Fire TV Stick</span></div>
-            </div>
-
-            <div class="devices-new-img-wrapper">
-                <img src="InShot_20260410_184153994.jpg" alt="Compatible IPTV Devices LuxeStream" class="devices-new-img">
-            </div>
-
-        </div>
     </section>
 
     <section class="pricing">
