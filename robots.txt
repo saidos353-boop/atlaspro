@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://atlaspro-france.cc/sitemap.xml
